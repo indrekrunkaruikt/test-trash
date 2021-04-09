@@ -1,0 +1,13 @@
+body{
+    background-color: orange;
+}
+header{
+    margin: auto;
+}
+section{
+    background-color: white;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 15%;
+}
