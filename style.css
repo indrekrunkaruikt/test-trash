@@ -13,6 +13,9 @@ h1{
     font-family: "Misto";
     font-weight: bold;
 }
+.text-right{
+    text-align: right;
+}
 .underlined-text{
     text-decoration: underline;
 }
