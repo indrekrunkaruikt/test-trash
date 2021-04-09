@@ -1,8 +1,20 @@
+@font-face {
+    font-family: "Misto";
+    src: url("Misto.woff2") format("woff2"),
+         url("Misto.woff") format("woff");
+  }
+
 body{
+    font-size: 20px;
     background-color: orange;
 }
-header{
-    margin: auto;
+
+h1{
+    font-family: "Misto";
+    font-weight: bold;
+}
+.underlined-text{
+    text-decoration: underline;
 }
 section{
     background-color: white;
@@ -10,4 +22,8 @@ section{
     margin-left: 5%;
     margin-right: 5%;
     padding: 15%;
+    border-radius: 10px;
+}
+section:first{
+    margin-top: 0%;
 }
