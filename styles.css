@@ -337,7 +337,7 @@ body {
   background-image: url(images/pexels-irina-iriser-1334146.jpg);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .background-4 {
     min-height: 900px;
     background-size: cover;
@@ -362,7 +362,7 @@ body {
 }
 
 .background-4-darkmode {
-  background-image: url("/images/pexels-henry-&-co-1464474.jpg");
+  background-image: url(/images/pexels-henry-&-co-1464474.jpg);
 }
 
 .portfolio-content {
