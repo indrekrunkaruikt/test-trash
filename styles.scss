@@ -1,0 +1,398 @@
+
+@import './helpers/variables';
+@import './helpers/typography';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: raleway;
+    scroll-behavior: smooth;
+}
+body{
+    transition: 0.2s;
+
+}
+.body-darkmode{
+    background-color: black;
+    color: white;
+}
+.business-card{
+    margin: auto;
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    padding-bottom: 132px;
+    background: linear-gradient(
+        30deg,
+        rgba(255, 255, 255, 0.4), 
+        rgba(255, 255, 255, 0.7) 
+        );
+    backdrop-filter: blur(2px);
+    z-index: 2;
+    filter: drop-shadow(0 4px 4px #5F8733 35%);
+    padding: 4rem;
+    .card-info{
+        .row{
+            display: flex;
+            align-items: center;
+            .icon{
+                img{
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+            .icon-copy{
+                margin-left: 20px;
+            }
+            .card-text{
+                font-size: 1.4rem;
+                margin-left: 1.4rem;
+            }
+            .card-email{
+                display: flex;
+                align-items: center;
+                .icon-copy{
+                    opacity: 0;
+                }
+            }
+            .card-email:hover{
+                cursor: pointer;
+                .icon-copy{
+                    transition: 0.25s;
+
+                    opacity: 1;
+                }
+            }
+        }
+        .row:not(:first-child){
+            margin-top: 2rem;
+        }
+
+    }
+    img{
+        height: 5rem;
+        width: 15rem;
+    }
+    @media (max-width: $bp-xs-min) {
+        img{
+            height: 3rem;
+            width: 9rem;
+        }
+        padding: rem;
+    }
+    @media (max-width: $bp-sm-min) {
+        flex-direction: column;
+        margin-top: 28vh;
+        img{
+            height: 4rem;
+            width: 12rem;
+        }
+        .card-info .row .card-text{
+            font-size: 1rem;
+        }
+        padding: 1rem;
+    }
+    @media (max-width: $bp-md-min) {
+        img{
+            height: 5rem;
+            width: 15rem;
+        }
+        padding: 2rem;
+    }
+}
+
+#snackbar {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: #fff; 
+    color: #333;
+    text-align: center; 
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed; 
+    z-index: 20; 
+    left: 50%;
+    bottom: 30px; 
+  }
+  
+  #snackbar.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+.background-1{
+    display: flex;
+    background-image: url('/images/pexels-min-an-1313807.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    transition: 0.6s;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    @media (max-width: $bp-xs-min) {
+        border-bottom-left-radius: 3% 1%;
+        border-bottom-right-radius: 7% 1%;
+    }
+    @media (max-width: $bp-sm-min) {
+        border-bottom-left-radius: 7% 1%;
+        border-bottom-right-radius: 7% 1%;
+        min-height: 780px;
+    }
+    @media (max-width: $bp-sm-min) {
+        border-bottom-left-radius: 15% 2%;
+        border-bottom-right-radius: 15% 2%;
+    }
+    @media (max-width: $bp-md-min) {
+        border-bottom-left-radius: 50% 5%;
+        border-bottom-right-radius: 50% 5%;
+    }
+    @media (max-width: $bp-lg-min) {
+        border-bottom-left-radius: 50% 10%;
+        border-bottom-right-radius: 50% 10%;
+    }
+}
+.background-1-darkmode{
+    background-image: url('/images/pexels-adrien-olichon-2387793.jpg');
+}
+.background-2{
+    min-height: 1500px;
+    width: 100%;
+    clip-path: polygon(0 57%, 0 16%, 100% 2%, 100% 80%, 0 95%, 0 74%, 100% 46%, 100% 25%);
+
+    background-image: 
+        url(images/pexels-allec-gomes-5403485.jpg);
+    background-size: cover;
+    z-index: 0;
+    transition: 0.5s;
+    position:relative;
+    margin-top: 2rem;
+    @media (max-width: $bp-lg-min) {
+        clip-path: polygon(0 57%, 0 16%, 100% 2%, 100% 80%, 0 95%, 0 74%, 100% 46%, 100% 25%);
+        min-height: 1600px;
+    }
+    @media (max-width: $bp-md-min) {
+        clip-path: polygon(0 57%, 0 2%, 100% 0%, 100% 93%, 0 100%, 0 50%, 100% 50%, 100% 50%);
+        min-height: 1600px;
+    }
+    @media (max-width: $bp-sm-min) {
+        clip-path: none;
+        min-height: 1600px;
+    }
+}
+.background-2-darkmode{
+    background-image: url('/images/pexels-cátia-matos-1072179.jpg');
+}
+.background-3{
+    min-height: 1150px;
+    clip-path: polygon(0 94%, 0 0, 100% 7%, 100% 24%, 0 16%, 0 32%, 100% 27%, 100% 75%, 0 71%, 0 75%, 100% 85%, 100% 100%);
+    background-image: 
+        url(images/pexels-felix-mittermeier-1146120.jpg);
+    background-size: cover;
+    z-index: 0;
+    position:relative;
+    transition: 0.5s;
+    @media (max-width: $bp-lg-min) {
+        margin-top: 5rem;
+        min-height: 1450px;
+    }
+    @media (max-width: $bp-md-min) {
+        clip-path: polygon(100% 85%, 100% 80%, 0 65%, 0 0, 100% 0, 100% 15%, 0 16%, 0 28%, 100% 23%, 100% 100%, 0 100%, 0 76%);
+    }
+    @media (max-width: $bp-sm-min) {
+        clip-path: none;
+        min-height: 1800px;
+    }    
+}
+.background-3-darkmode{
+    background-image: url(images/pexels-irina-iriser-1334146.jpg);
+}
+.background-4{
+    @media(min-width: $bp-lg-min){
+        min-height: 900px;
+        background-size: cover;
+        margin-top: 5rem;
+        background-image: url(images/pexels-dorothy-castillo-2274729.jpg);
+        transition: 0.5s;
+        clip-path: polygon(35% 100%, 36% 100%, 29% 0, 56% 0, 57% 100%, 59% 100%, 65% 0, 100% 0, 92% 100%, 8% 100%, 3% 0, 25% 0);
+    }
+    @media (max-width: 425px) {
+        min-height: 1000px;
+        background-size: cover;
+        margin-top: 5rem;
+        background-image: url(images/pexels-dorothy-castillo-2274729.jpg);
+        transition: 0.5s;
+    }  
+}
+.background-4-darkmode{
+    background-image: url(/images/pexels-henry-&-co-1464474.jpg);
+}
+.portfolio-content{
+    top: 70rem;
+    position: absolute;
+    left: 50%;
+}
+.toggle-darkmode{
+    background-color: $button-color;
+    width: 6rem;
+    height: 6rem;
+    z-index: 4;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    cursor: pointer;
+    img{
+        height: 45px;
+        width: 45px;
+    }
+
+    @media (max-width: $bp-lg-min) {
+        width: 4rem;
+        height: 4rem;
+        top: 0.75rem;
+        right: 0.75rem;
+        img{
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+.toggle-darkmode:hover{
+    transition: 0.2s;
+    background-color: $button-color-hover;
+}
+.toggle-darkmode-rotate-button{
+    transform: rotate(-180deg);
+}
+.head-to-business-card{
+    background-color: $button-color;
+    width: 6rem;
+    height: 6rem;
+    z-index: 4;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 5rem;
+    left: 5rem;
+    cursor: pointer;
+    img{
+        height: 45px;
+        width: 45px;
+    }
+    @media (max-width: $bp-lg-min) {
+        width: 4rem;
+        height: 4rem;
+        top: 0.75rem;
+        left: 0.75rem;
+        img{
+            height: 30px;
+            width: 30px;
+        }
+    }
+}    
+.head-to-business-card:hover{
+    transition: 0.2s;
+    background-color: $button-color-hover;
+}
+
+.glass-window{
+    margin: auto;
+    margin-top: 4rem;
+    border-radius: .8rem;
+    padding-bottom: 132px;
+    background: linear-gradient(
+        30deg,
+        rgba(255, 255, 255, 0.4), 
+        rgba(214, 214, 214, 0.7) 
+        );
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    filter: drop-shadow(0 4px 4px #5F8733 35%);
+    padding: 4rem;
+    transition: 0.2s;
+    width: 60vw;
+    margin-left: -30vw;  
+    h1{
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+    h3{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    p{
+        line-height: 2;
+    }
+
+    @media (max-width: $bp-md-min) {
+        width: 80vw;
+        margin-left: -40vw;
+        padding: 2rem;
+    }
+    @media (max-width: $bp-sm-min) {
+        width: 100vw;
+        margin-left: -50vw;
+    }
+}
+
+.skills{
+
+    @media (max-width: $bp-lg-min) {
+        margin-top: -6rem;
+    }
+    @media (max-width: $bp-sm-min) {
+        margin-top: -18vh;
+    }
+}
+
+.problems-solved{
+    .portfolio-card{
+        .portfolio-info{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .portfolio-images{
+                transition: transform .2s;
+                background-size: cover;
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+.who-i-am{
+    margin-bottom: 4rem;
+    @media (max-width: $bp-sm-min) {
+        margin-bottom: 2rem;
+    }
+}

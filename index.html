@@ -4,74 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D51DS6HYK5"></script>
-    <link rel="stylesheet" href="style.css">
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-D51DS6HYK5');
-    </script>
+    <title>Indrek Rünkaru</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section>
-        <h1>This is my portfolio</h1>
-        <img src="logo.svg" alt="logo">
-    </section>
-    <section><h1>Hero section</h1>
-        <div class="text-right">
-            "Programming isn't about what you know; it's about what you can figure out.” 
-            <br>
-            - Chris Pine
+    <div class="background-1" id="business-card-anchor">
+        <div class="business-card">
+            <div class="logo-holder">
+                <img src="images/logo.svg" alt="logo" id="logo">
+            </div>
+            <div class="card-info">
+                <div class="row">
+                    <div class="icon">
+                        <img src="images/icons/perm_identity.svg">
+                    </div>
+                    <div class="card-text">
+                        Indrek Rünkaru
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <img src="images/icons/work.svg">
+                    </div>
+                    <div class="card-text">
+                        Junior software developer
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <img src="images/icons/mail.svg">
+                    </div>
+                    <div class="card-text card-email" onclick="copyElementToClipboard()">
+                        indrek93@gmail.com
+                        <div class="icon icon-copy">
+                            <img src="/images/icons/content_copy.svg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
-    </section>
-    <section>
-        <h1>Problems solved</h1>
-        <ul>
-            <li> 
-                I took a part in developemnt of an intranet system for a women's choir.
-            </li>
-            <li>
-                I took a part in the development of hairdressing salon management app development.
-            </li>
-            <li>
-                I took a part in the development of a mobile phone game.
-            </li>
-        </ul>
-    </section>
-    <section>
-        <h1>Morals and philosophy</h1>
-        Like a hired gun I got neither Morals or a philosophy. I'll work for who ever pays me the most.
-    </section>
-    <section>
-        <h1>What I do</h1>
-        I consider myself to be fairly flexbile developer when it comes to choosing between front-end and backend.
-        <hr>
-        <h3>Front-end</h3>
-        In front-end developemnt I am familiar with <b>pure Javascript, Vue.js, React and angular</b>.
-        <hr>
-        <h3>Back-end</h3>
-        For backend development I am most comfortable using <b>Twig templating engine and basic php</b>.
-        <hr>
-        <h3>Wordpress</h3>
-        I am  comfortable with developing client-specific wordpress themes using <b>Timber</b>. 
-        <hr>
-        <h3>Database</h3>
-        For database management I have experience with using <b>MongoDb, Mysql and Firestore</b>.
-        <hr>
-    </section>
-    <section>
-        <h1>Capablities</h1>
-        Programming to me is a never ending struggle that causes endless anxiety and contentment. I haven't given up on  it yet and I am always looking for new challenges in this field.
-    </section>
-    <section>
-        <h1>F.A.Q</h1>
-        q: How do I contact you? <br>
-        a: You can email me at indrek93@gmail.com
-    </section>
-    <footer></footer>
+    </div>
+    <div id="snackbar">Copied to clipboard</div>
+    <div class="toggle-darkmode">
+        <img src="images/icons/Toggle darkmode.svg" alt="TD" class="button-to-business-card">
+
+    </div>
+    <a href="#business-card-anchor">
+        <div class="head-to-business-card">
+            <img src="images/icons/Business-card.svg" alt="BC" class="button-to-business-card">
+        </div>
+    </a>
+    <div class="background-2">
+    </div>
+    <div class="background-3">
+    </div>
+    <div class="background-4">
+    </div>
+    <div class="portfolio-content">
+        <div class="skills glass-window">
+            <h1>What I can do?</h1>
+            <h3>Front-end</h3>
+                <p>
+                    Like a lot of developers I can confidently promise that most <b>Javascript, CSS</b> or <b>HTML</b> issues are not something that I couldn't handle without the help of Google.
+                    Among the more helpful front-end frameworks I have had most experience using <b>Vue.js</b> by developing a booking app for barbershops.
+                </p>
+                <p>
+                    During my education I have had minor experience with other Javascript frameworks like <b>React</b> or <b>Angular.</b> 
+                </p>
+           <h3>Back-end</h3>
+                <p>
+                    For Back-end I have most experience with using <b>PHP</b>, and PHP template rendering engine <b>Twig</b>. I believe myself to have adequate experience to become a supportive back-end team-member. 
+                </p>
+                <p>
+                    I have a bit of experience with <b>Java</b> and <b>C++</b> which I have used for minor apps and Arduino projects.
+                </p>
+            <h3>Wordpress</h3>
+            <p>
+                Previously I have worked on multiple wordpress projects. I am most confident when I'm making <b>tailor made</b> solutions using <b>Timber</b>.
+            </p>
+            <h3>Database</h3>
+            <p>
+                I have previous experience working with <b>Mysql, Mongodb </b>and <b> Firestore</b> database types.
+            </p>
+        </div>
+    
+        <div class="problems-solved glass-window">
+            <h1>Projects that I have worked on</h1>
+            <div class="portfolio-card">
+                <h3>Barbershop managing software Bookify</h3>
+                <div class="portfolio-info">
+                    <p>
+                        During the summer of 2019 I worked on  a software  for barbershop management. 
+                        The program was written using Vue.js 2.0 for front-end and Firestore for back-end. 
+                        Firesotre's API helped our customers to have constant updates on their current business
+                        situation without refreshing the page. The intended users, or our customers' customers, 
+                        would also see real-time updates for when the user had successfully registered for a
+                        haircut without refreshing the page. The project involved handling all the different 
+                        possible aspects for what an user might do. During this summer I developed a proper
+                        base for Vue and object oriented programming.
+                    </p>
+                    <img src="/images/bookify.png" alt=""  class="portfolio-images portfolio-image-1">
+                    <p>The front-page view of Bookify</p>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <h3>Tartu University Academic Women's Choir intranet</h3>
+                <div class="portfolio-info">
+                    <p>
+                        During the winter of 2020 The Tartu University Academic Women's Choir approached my teacher. 
+                        They were looking for volunteers interested in developing an Intranet for their organisation. 
+                        A team of willing students was formed and the team set out to develop the platform. 
+                        As one of the volunteers willing to take on the job my tasks involved testing and back-end. 
+                        We used Wordpress as the base for our project because the customer had previous experience with this CMS. 
+                        From there we decided to develop a Wordpress theme from scratch. For that purpose we used Timber 
+                        and Twig for presenting Wordpress front-end with dynamically used PHP for querying the database.
+                    </p>
+                    <img src="/images/tyan.PNG" alt="" srcset=""  class="portfolio-images portfolio-image-2">
+                    <p>The front-page view of TÜAN intranet</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="who-i-am glass-window">
+            <h1>Who I am?</h1>
+            <h3>Where I studied</h3>
+            <p>
+                I studied software development in the Tartu Vocational School where i received my EQF level 4 <a href="https://www.kutseregister.ee/ctrl/et/Tunnistused/vaata/10949701/1">qualifications</a>.
+                Tartu Vocational school differs from Universities in a manner where studying is more intensely concentrated on building practical solutions from start to finish. 
+                Where as in universities students will spend more effort in studying theoretical information that often does not see practical use in real life situations.  
+            </p>
+        <h3>My hobbies</h3>
+            <p>
+                I enjoy doing things with my hands. Without having any specific hobby that would define me I have dabbled in woodworking, brewing, hydroponics,  welding and so forth. 
+                Only boring people can get bored, there's an infinity of things that I would have to do before I could get bored or run out of hobbies to try.
+            </p>
+            <h3>I worked in construction</h3>
+                <p>
+                    Before I became a software developer I was an electrician/builder for about five years. 
+                    The career change happened due to health issues which made it not a good idea to follow such a physical career path. 
+                    I chose to become a software developer because it was a dream of mine that just seemed too impossible to become true: 
+                    To build games, websites and programs that would be a benefit to millions of people. 
+                    Like ancient stonemasons building cathedrals I could build something that maybe a billion people would use, be helped by or enjoy. 
+                </p>
+        </div>
+    
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
